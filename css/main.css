@@ -361,6 +361,11 @@ p.line {
     display: inline-block;
     margin-top: 0.5rem;
 }
+@media (max-width: 768px) {
+    .testimonials {
+        padding: 5rem 0.5rem;
+    }
+}
 
 
 /* ====================== ABOUT PAGE ====================== */
