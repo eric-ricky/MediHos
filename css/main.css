@@ -231,23 +231,22 @@ a {
 .services .row {
     align-items: center;
 }
-.tests {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-.tests .item {
-    font-size: 1.125rem;
-    color: #000428;
-}
-.tests .item i{
-    color: #f12341;
-    font-weight: 900;
-    font-size: 1.125rem;
-    padding-right: 1.25rem;
-}
 .services .btn {
     border-color: #f12341;
     background: #f12341;
+    border-radius: 0rem !important;
+}
+.services .feature {
+    display: flex;
+}
+.services .feature h5 {
+    font-size: 1.125rem;
+}
+.services .feature p {
+    font-size: 1.025rem;
+}
+.services .col-md-3 {
+    margin-top: 1.5rem;
 }
 
 /* Medium (md) devices (tablets, 768px and up) */
@@ -255,21 +254,18 @@ a {
     .services {
         padding: 1.2rem;
     }
-    .services img {
-        display: none;
-    }
 }
 
 
-/* CONTACT */
-.contact {
+/* APPOINTMENT FORM */
+.appointment {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
     url('/image/pexels-jonathan-meyer-668300.jpg') center center;
     background-attachment: fixed;
     padding: 5rem;
     color: #fff;
 }
-.contact .row {
+.appointment .row {
     display: flex;
 }
 .apply-info .icon i {
@@ -332,9 +328,31 @@ a {
 
 /* Medium (md) devices (tablets, 768px and up) */
 @media (max-width: 768px) {
-    .contact {
+    .appointment {
         padding: 1.25rem;
     }
+}
+
+
+/* features */
+.features {
+    padding: 5rem;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('/image/pexels-jonathan-meyer-668300.jpg') no-repeat center center;
+}
+.features .title {
+    color: #fff;
+}
+.features .feature {
+    background: #fff;
+    box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 2rem;
+    min-height: 400px;
+    overflow: hidden;
+}
+.features .feature .icon {
+    margin-bottom: 1.325rem;
 }
 
 
@@ -367,24 +385,6 @@ p.line {
     }
 }
 
-
-/* ====================== ABOUT PAGE ====================== */
-.hero-sm {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url('/image/nurse-2141808_1920.jpg') no-repeat center center;
-    height: 50vh;
-    color: #fff;
-    display: flex;
-    align-items: center;
-}
-.hero-sm h2 {
-    color: #fff;
-    font-size: 4rem;
-}
-.hero-sm p {
-    text-transform: capitalize;
-    font-size: 1.2375rem;
-}
 
 /* team */
 .team {
@@ -533,6 +533,24 @@ p.line {
     }
 }
 /* end team */
+
+/* ====================== ABOUT PAGE ====================== */
+.hero-sm {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('/image/nurse-2141808_1920.jpg') no-repeat center center;
+    height: 40vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.hero-sm h2 {
+    color: #fff;
+    font-size: 4rem;
+}
+.hero-sm p {
+    text-transform: capitalize;
+    font-size: 1.2375rem;
+}
 /* ============== end about page =========== */
 
 /* ====================== SERVICES PAGE ====================== */
@@ -548,23 +566,6 @@ p.line {
 .services-p .col-md-3 {
     margin-top: 1.5rem;
 }
-
-/* features */
-.features {
-    padding: 5rem;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url('/image/pexels-jonathan-meyer-668300.jpg') no-repeat center center;
-}
-.features .title {
-    color: #fff;
-}
-.features .feature {
-    background: #fff;
-    box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    padding: 2rem;
-}
-
 /* Medium (md) devices (tablets, 768px and up) */
 @media (max-width: 768px) {
     .features {
@@ -575,11 +576,137 @@ p.line {
     }
 
 }
-
-
-/* end features */
 /* ============== end services page =========== */
 
+/* ====================== SINGLE SERVICES PAGE ====================== */
+.hero-xm {
+    height: 30vh;
+    background: linear-gradient(rgba(238, 231, 231, 0.8),rgba(241, 234, 234, 0.8))
+    ,url('/image/nurse-2141808_1920.jpg') no-repeat top center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.hero-xm nav .breadcrumb {
+    background: #fff !important;
+}
+.services-single {
+    padding: 5rem;
+}
+.services-single .service-info p{
+    font-size: 1.125rem;
+}
+.tests {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.tests .right {
+    padding-left: 5rem;
+}
+.tests .item {
+    font-size: 1.125rem;
+    color: #000428;
+}
+.tests .item i{
+    color: #f12341;
+    font-weight: 900;
+    font-size: 1.125rem;
+    padding-right: 1.0125rem;
+}
+.service-info .btn {
+    background: #f12341;
+    border-radius: 0;
+}
+.service-info .btn:hover {
+    background: #000428;
+    color: #fff;
+}
+
+.w-hours {
+    background: #000428;
+    padding: 5rem 2rem;
+    border-radius: 2rem;
+    width: 75%;
+    margin: 1rem auto;
+    color: #fff;
+    box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.w-hours h6 {
+    font-size: 1.325rem;
+    font-weight: 900;
+    margin-bottom: 2rem;
+}
+/* Medium (md) devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .services-single {
+        padding: 1.25rem;
+    }
+    .tests {
+        flex-flow: column;
+    }
+    .tests .right {
+        padding-left: 0rem;
+    }
+    .tests .item {
+        display: flex;
+    }
+    .w-hours {
+        padding: 5rem 1.2rem;
+        width: 100%;
+    }
+}
+/* ============== end single services page =========== */
+
+/* ====================== SINGLE DOCTORS PAGE ====================== */
+.doctor-single {
+    padding: 5rem;
+}
+.doctor-single .col-md-8 .content {
+    padding-left: 5rem;
+}
+@media (max-width: 768px) {
+    .doctor-single {
+        padding: 1.25rem;
+    }
+    .doctor-single .caption {
+        display: none;
+    }
+    .doctor-single .col-md-8 .content {
+        padding-left: 0rem;
+        margin-top: 4rem;
+    }
+}
+/* ============== end single doctors page =========== */
+
+/* ====================== CONTACT PAGE ====================== */
+.contact {
+    padding: 5rem;
+    padding-top: 5rem;
+    background: #eee;
+}
+.contact .btn {
+    background: #f12341;
+    border-radius: 0rem;
+}
+.contact .btn:hover {
+    background:#000428;
+    color: #fff;
+}
+.contact .col-md-5 .content {
+    padding-left: 5rem;
+}
+@media (max-width: 768px) {
+    .contact {
+        padding: 1.25rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    .contact .col-md-5 .content {
+        padding-left: 0rem;
+        margin-top: 4rem;
+    }
+}
+/* ============== end contact page =========== */
 
 
 
@@ -685,11 +812,10 @@ footer .info-f a {
     font-size: 1.05rem;
     color: #ccc;
 }
-
-footer .work-hrs li {
+.work-hrs li {
     color: #eee;
 }
-footer .work-hrs li span {
+.work-hrs li span {
     color: #ccc;
     font-weight: 400;
 }
