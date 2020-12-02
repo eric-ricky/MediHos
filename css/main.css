@@ -62,11 +62,15 @@ a {
 .navbar-brand span {
     color: #f12341;
 }
-.navbar .toggler-icon {
-    width: 2.75rem;
-    height: 0.5rem;
+.navbar-toggler {
+    outline: none !important;
+}
+.navbar-toggler .toggler-icon {
+    width: 2.25rem;
+    height: 0.25rem;
     background-color: #222;
     margin-bottom: 0.25rem;
+    outline: none !important;
 }
 
 .nav-item {
@@ -339,6 +343,8 @@ a {
     padding: 5rem;
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
     url('/image/pexels-jonathan-meyer-668300.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 .features .title {
     color: #fff;
@@ -551,6 +557,12 @@ p.line {
 .hero-sm p {
     text-transform: capitalize;
     font-size: 1.2375rem;
+}
+
+@media (max-width: 768px) {
+    .hero-sm h2 {
+        font-size: 2.5rem;
+    }
 }
 /* ============== end about page =========== */
 
